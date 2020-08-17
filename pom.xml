@@ -35,7 +35,7 @@
 
     <groupId>com.github.hazendaz.nodejs</groupId>
     <artifactId>nodejs</artifactId>
-    <version>12.18.4-SNAPSHOT</version>
+    <version>12.18.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>nodejs</name>
@@ -76,7 +76,16 @@
                 <version>${download-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>nodejs-linux</id>
+                        <id>nodejs-linux-gz</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>https://nodejs.org/dist/v${nodejs.version}/node-v${nodejs.version}-linux-x64.tar.gz</url>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nodejs-linux-xz</id>
                         <goals>
                             <goal>wget</goal>
                         </goals>
@@ -85,7 +94,16 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>nodejs-windows</id>
+                        <id>nodejs-windows-7z</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>https://nodejs.org/dist/v${nodejs.version}/node-v${nodejs.version}-win-x64.7z</url>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nodejs-windows-zip</id>
                         <goals>
                             <goal>wget</goal>
                         </goals>
@@ -110,13 +128,23 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
+                                    <file>${project.build.directory}/node-v${nodejs.version}-linux-x64.tar.gz</file>
+                                    <classifier>linux-x64</classifier>
+                                    <type>tar.gz</type>
+                                </artifact>
+                                <artifact>
                                     <file>${project.build.directory}/node-v${nodejs.version}-linux-x64.tar.xz</file>
-                                    <classifier>linux</classifier>
+                                    <classifier>linux-x64</classifier>
                                     <type>tar.xz</type>
                                 </artifact>
                                 <artifact>
+                                    <file>${project.build.directory}/node-v${nodejs.version}-win-x64.7z</file>
+                                    <classifier>win-x64</classifier>
+                                    <type>7z</type>
+                                </artifact>
+                                <artifact>
                                     <file>${project.build.directory}/node-v${nodejs.version}-win-x64.zip</file>
-                                    <classifier>windows</classifier>
+                                    <classifier>win-x64</classifier>
                                     <type>zip</type>
                                 </artifact>
                             </artifacts>
