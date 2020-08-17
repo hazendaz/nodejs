@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) GitHub, Inc.
+    Copyright (c) Hazendaz
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.hazendaz</groupId>
+        <artifactId>base-parent</artifactId>
+        <version>26</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.github.hazendaz.nodejs</groupId>
+    <artifactId>nodejs</artifactId>
+    <version>12.18.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>nodejs</name>
+    <description>Distribution for Nodejs</description>
+    <url>https://hazendaz.github.io/nodejs/</url>
+    <licenses>
+        <license>
+            <name>The MIT License</name>
+            <url>https://github.com/nodejs/node/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com/hazendaz/nodejs.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/hazendaz/nodejs.git</developerConnection>
+        <url>https://github.com/hazendaz/nodejs</url>
+        <tag>HEAD</tag>
+    </scm>
+    <distributionManagement>
+        <site>
+            <id>gh-pages</id>
+            <name>Nodejs Distribution Wrapper GitHub Pages</name>
+            <url>github:https://hazendaz.github.io/nodejs/</url>
+        </site>
+    </distributionManagement>
+
+    <properties>
+        <nodejs.version>12.18.3</nodejs.version>
+        <download-plugin.version>1.6.0</download-plugin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Download -->
+            <plugin>
+                <groupId>com.googlecode.maven-download-plugin</groupId>
+                <artifactId>download-maven-plugin</artifactId>
+                <version>${download-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>nodejs-linux</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>https://nodejs.org/dist/v${nodejs.version}/node-v${nodejs.version}-linux-x64.tar.xz</url>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nodejs-windows</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>https://nodejs.org/dist/v${nodejs.version}/node-v${nodejs.version}-win-x64.zip</url>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Attach Artifact -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>${project.build.directory}/node-v${nodejs.version}-linux-x64.tar.xz</file>
+                                    <type>tar.xz</type>
+                                </artifact>
+                                <artifact>
+                                    <file>${project.build.directory}/node-v${nodejs.version}-win-x64.zip</file>
+                                    <type>zip</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
