@@ -35,7 +35,7 @@
 
     <groupId>com.github.hazendaz.nodejs</groupId>
     <artifactId>nodejs</artifactId>
-    <version>12.18.4-SNAPSHOT</version>
+    <version>12.18.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>nodejs</name>
@@ -111,10 +111,12 @@
                             <artifacts>
                                 <artifact>
                                     <file>${project.build.directory}/node-v${nodejs.version}-linux-x64.tar.xz</file>
+                                    <classifier>linux</classifier>
                                     <type>tar.xz</type>
                                 </artifact>
                                 <artifact>
                                     <file>${project.build.directory}/node-v${nodejs.version}-win-x64.zip</file>
+                                    <classifier>windows</classifier>
                                     <type>zip</type>
                                 </artifact>
                             </artifacts>
