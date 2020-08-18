@@ -34,8 +34,8 @@
     </parent>
 
     <groupId>com.github.hazendaz.nodejs</groupId>
-    <artifactId>nodejs</artifactId>
-    <version>v12.18.4-SNAPSHOT</version>
+    <artifactId>node</artifactId>
+    <version>v12.18.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>nodejs</name>
