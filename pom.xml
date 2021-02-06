@@ -56,9 +56,9 @@
     </scm>
     <distributionManagement>
         <site>
-            <id>gh-pages</id>
+            <id>gh-pages-scm</id>
             <name>Nodejs Distribution Wrapper GitHub Pages</name>
-            <url>github:https://hazendaz.github.io/nodejs/</url>
+            <url>scm:git:ssh://git@github.com/hazendaz/nodejs.git</url>
         </site>
     </distributionManagement>
 
