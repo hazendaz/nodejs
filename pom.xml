@@ -64,7 +64,7 @@
 
     <properties>
         <nodejs.version>v15.8.0</nodejs.version>
-        <download-plugin.version>1.6.2</download-plugin.version>
+        <download-plugin.version>1.6.3</download-plugin.version>
     </properties>
 
     <build>
