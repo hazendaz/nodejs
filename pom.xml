@@ -35,7 +35,7 @@
 
     <groupId>com.github.hazendaz.nodejs</groupId>
     <artifactId>node</artifactId>
-    <version>v16.14.1-SNAPSHOT</version>
+    <version>v17.7.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>nodejs</name>
@@ -63,7 +63,7 @@
     </distributionManagement>
 
     <properties>
-        <nodejs.version>v17.6.0</nodejs.version>
+        <nodejs.version>v17.7.1</nodejs.version>
         <download-plugin.version>1.6.8</download-plugin.version>
     </properties>
 
