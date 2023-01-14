@@ -63,7 +63,7 @@
     </distributionManagement>
 
     <properties>
-        <nodejs.version>v18.13.0</nodejs.version>
+        <nodejs.version>v19.4.0</nodejs.version>
         <download-plugin.version>1.6.8</download-plugin.version>
     </properties>
 
