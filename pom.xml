@@ -63,8 +63,8 @@
     </distributionManagement>
 
     <properties>
-        <download-plugin.version>1.7.0</download-plugin.version>
         <nodejs.version>v20.2.0</nodejs.version>
+        <download-plugin.version>1.6.8</download-plugin.version>
     </properties>
 
     <build>
