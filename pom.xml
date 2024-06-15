@@ -36,7 +36,7 @@
 
     <groupId>com.github.hazendaz.nodejs</groupId>
     <artifactId>node</artifactId>
-    <version>v18.20.3-SNAPSHOT</version>
+    <version>v18.20.3</version>
     <packaging>pom</packaging>
 
     <name>nodejs</name>
@@ -53,7 +53,7 @@
         <connection>scm:git:ssh://git@github.com/hazendaz/nodejs.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/hazendaz/nodejs.git</developerConnection>
         <url>https://github.com/hazendaz/nodejs</url>
-        <tag>HEAD</tag>
+        <tag>node-v18.20.3</tag>
     </scm>
     <distributionManagement>
         <site>
