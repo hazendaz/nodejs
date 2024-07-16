@@ -77,6 +77,24 @@
                 <version>${download-plugin.version}</version>
                 <executions>
                     <execution>
+                        <id>nodejs-headers-gz</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>https://nodejs.org/dist/${nodejs.version}/node-${nodejs.version}-headers.tar.gz</url>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nodejs-headers-xz</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>https://nodejs.org/dist/${nodejs.version}/node-${nodejs.version}-headers.tar.xz</url>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>nodejs-linux-gz</id>
                         <goals>
                             <goal>wget</goal>
