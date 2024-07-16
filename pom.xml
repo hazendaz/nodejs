@@ -147,6 +147,16 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
+                                    <file>${project.build.directory}/node-${nodejs.version}-headers.tar.gz</file>
+                                    <classifier>headers</classifier>
+                                    <type>tar.gz</type>
+                                </artifact>
+                                <artifact>
+                                    <file>${project.build.directory}/node-${nodejs.version}-headers.tar.xz</file>
+                                    <classifier>headers</classifier>
+                                    <type>tar.xz</type>
+                                </artifact>
+                                <artifact>
                                     <file>${project.build.directory}/node-${nodejs.version}-linux-x64.tar.gz</file>
                                     <classifier>linux-x64</classifier>
                                     <type>tar.gz</type>
