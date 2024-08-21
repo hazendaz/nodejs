@@ -52,8 +52,8 @@
     <scm>
         <connection>scm:git:ssh://git@github.com/hazendaz/nodejs.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/hazendaz/nodejs.git</developerConnection>
-        <url>https://github.com/hazendaz/nodejs</url>
         <tag>HEAD</tag>
+        <url>https://github.com/hazendaz/nodejs</url>
     </scm>
     <distributionManagement>
         <site>
@@ -140,10 +140,10 @@
                 <executions>
                     <execution>
                         <id>attach-artifacts</id>
-                        <phase>package</phase>
                         <goals>
                             <goal>attach-artifact</goal>
                         </goals>
+                        <phase>package</phase>
                         <configuration>
                             <artifacts>
                                 <artifact>
