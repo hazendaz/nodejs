@@ -65,7 +65,7 @@
 
     <properties>
         <nodejs.version>v22.11.0</nodejs.version>
-        <download-plugin.version>1.11.2</download-plugin.version>
+        <download-plugin.version>1.11.3</download-plugin.version>
     </properties>
 
     <build>
