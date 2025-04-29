@@ -64,7 +64,7 @@
     </distributionManagement>
 
     <properties>
-        <nodejs.version>v22.15.0</nodejs.version>
+        <nodejs.version>v23.11.0</nodejs.version>
         <download-plugin.version>2.0.0</download-plugin.version>
     </properties>
 
