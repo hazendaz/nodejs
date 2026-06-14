@@ -1,7 +1,7 @@
 # NodeJS Distro
 
 [![Java CI](https://github.com/hazendaz/nodejs/workflows/Java%20CI/badge.svg)](https://github.com/hazendaz/nodejs/actions?query=workflow%3A%22Java+CI%22)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.hazendaz.nodejs/nodejs.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.github.hazendaz.nodejs/nodejs)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.hazendaz.nodejs/node.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.github.hazendaz.nodejs/node)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ![hazendaz](src/site/resources/images/hazendaz-banner.jpg)
