@@ -13,3 +13,7 @@ For more information on nodejs, please see [nodejs](https://nodejs.org/en/)
 # Motivation #
 
 Nodejs does not currently provide a maven central distribution. This project aims to solve that by providing users an alternative location to pull in maven friendly way.
+
+# Note #
+
+This project has a strong need to be in maven so it can be naturally used with the frontend-maven-plugin.
